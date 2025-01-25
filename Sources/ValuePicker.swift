@@ -12,16 +12,16 @@ struct ValuePickerConstants {
     static let capsuleEdgeInsets = EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12)
 }
 
+extension Animation {
+    static let valuePicker: Animation = .spring(duration: 0.3, bounce: 0.15, blendDuration: 0.21)
+}
+
 @MainActor
 public struct ValuePicker<SelectionValue, Content>: View where SelectionValue: Hashable & Sendable, Content: View {
     @Binding public var selection: SelectionValue
     public let animation: Animation
     public let content: Content
-    
-    public static var defaultAnimation: Animation {
-        get { Animation.spring(duration: 0.3, bounce: 0.15, blendDuration: 0.21) }
-    }
-    
+
     @State private var isPressing = false
     @State private var pressFinalLocation: CGPoint = .zero
     @State private var isDragging = false
@@ -65,11 +65,11 @@ public struct ValuePicker<SelectionValue, Content>: View where SelectionValue: H
     
     public init(
         selection: Binding<SelectionValue>,
-        animation: Animation = ValuePicker.defaultAnimation,
+        animation: Animation? = nil,
         @ViewBuilder content: @escaping () -> Content
     ) {
         self._selection = selection
-        self.animation = animation
+        self.animation = animation ?? .valuePicker
         self.content = content()
     }
     
