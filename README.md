@@ -1,6 +1,6 @@
 # ValuePicker
 
-Customizable value picker for SwiftUI.
+Customizable (soon) value picker for SwiftUI.
 
 <img width="300" src="https://github.com/user-attachments/assets/91525082-f9c1-4539-9382-47a044b8a819" alt="ValuePicker" />
 
