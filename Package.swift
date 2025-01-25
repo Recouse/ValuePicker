@@ -6,7 +6,8 @@ let package = Package(
     name: "ValuePicker",
     platforms: [
         .iOS(.v15),
-        .macOS(.v12)
+        .macOS(.v12),
+        .visionOS(.v1)
     ],
     products: [
         .library(name: "ValuePicker", targets: ["ValuePicker"])

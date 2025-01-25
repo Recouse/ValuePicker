@@ -58,7 +58,12 @@ struct ContentView: View {
                 }
             }
         }
+        #if os(visionOS)
+        .padding(30)
+        .glassBackgroundEffect()
+        #else
         .padding()
+        #endif
     }
 }
 
