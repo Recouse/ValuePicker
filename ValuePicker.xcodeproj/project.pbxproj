@@ -3,18 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F9C665E2B6AC36B007093B5 /* ValuePicker.docc in Sources */ = {isa = PBXBuildFile; fileRef = 6F9C665D2B6AC36B007093B5 /* ValuePicker.docc */; };
+		6F03E76E2D445A150068A0C9 /* ValuePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9C66592B6AC36B007093B5 /* ValuePicker.framework */; platformFilters = (ios, macos, ); };
+		6F03E76F2D445A150068A0C9 /* ValuePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9C66592B6AC36B007093B5 /* ValuePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6F9C66642B6AC36C007093B5 /* ValuePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9C66592B6AC36B007093B5 /* ValuePicker.framework */; };
-		6F9C66692B6AC36C007093B5 /* ValuePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9C66682B6AC36C007093B5 /* ValuePickerTests.swift */; };
-		6F9C66742B6AC377007093B5 /* ValuePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9C66732B6AC377007093B5 /* ValuePicker.swift */; };
-		6FCA02832C1EE1C2003B1949 /* ValuePickerTagValueTraitKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCA02822C1EE1C2003B1949 /* ValuePickerTagValueTraitKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6F03E7702D445A150068A0C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F9C66502B6AC36B007093B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F9C66582B6AC36B007093B5;
+			remoteInfo = ValuePicker;
+		};
 		6F9C66652B6AC36C007093B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6F9C66502B6AC36B007093B5 /* Project object */;
@@ -24,16 +29,53 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6F03E7722D445A150068A0C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6F03E76F2D445A150068A0C9 /* ValuePicker.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6F03E7522D4459EC0068A0C9 /* ValuePickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValuePickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F9C66592B6AC36B007093B5 /* ValuePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ValuePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F9C665D2B6AC36B007093B5 /* ValuePicker.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ValuePicker.docc; sourceTree = "<group>"; };
 		6F9C66632B6AC36C007093B5 /* ValuePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValuePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F9C66682B6AC36C007093B5 /* ValuePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePickerTests.swift; sourceTree = "<group>"; };
-		6F9C66732B6AC377007093B5 /* ValuePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePicker.swift; sourceTree = "<group>"; };
-		6FCA02822C1EE1C2003B1949 /* ValuePickerTagValueTraitKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePickerTagValueTraitKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6F03E7532D4459EC0068A0C9 /* Example */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Example;
+			sourceTree = "<group>";
+		};
+		6F03E7652D4459F80068A0C9 /* Sources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		6F03E76B2D4459FC0068A0C9 /* Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		6F03E74F2D4459EC0068A0C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F03E76E2D445A150068A0C9 /* ValuePicker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6F9C66562B6AC36B007093B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,11 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F03E76D2D445A150068A0C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6F9C664F2B6AC36B007093B5 = {
 			isa = PBXGroup;
 			children = (
-				6F9C665B2B6AC36B007093B5 /* ValuePicker */,
-				6F9C66672B6AC36C007093B5 /* ValuePickerTests */,
+				6F03E7652D4459F80068A0C9 /* Sources */,
+				6F03E76B2D4459FC0068A0C9 /* Tests */,
+				6F03E7532D4459EC0068A0C9 /* Example */,
+				6F03E76D2D445A150068A0C9 /* Frameworks */,
 				6F9C665A2B6AC36B007093B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,26 +117,9 @@
 			children = (
 				6F9C66592B6AC36B007093B5 /* ValuePicker.framework */,
 				6F9C66632B6AC36C007093B5 /* ValuePickerTests.xctest */,
+				6F03E7522D4459EC0068A0C9 /* ValuePickerExample.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6F9C665B2B6AC36B007093B5 /* ValuePicker */ = {
-			isa = PBXGroup;
-			children = (
-				6F9C665D2B6AC36B007093B5 /* ValuePicker.docc */,
-				6F9C66732B6AC377007093B5 /* ValuePicker.swift */,
-				6FCA02822C1EE1C2003B1949 /* ValuePickerTagValueTraitKey.swift */,
-			);
-			path = ValuePicker;
-			sourceTree = "<group>";
-		};
-		6F9C66672B6AC36C007093B5 /* ValuePickerTests */ = {
-			isa = PBXGroup;
-			children = (
-				6F9C66682B6AC36C007093B5 /* ValuePickerTests.swift */,
-			);
-			path = ValuePickerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +135,30 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		6F03E7512D4459EC0068A0C9 /* ValuePickerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F03E7602D4459EE0068A0C9 /* Build configuration list for PBXNativeTarget "ValuePickerExample" */;
+			buildPhases = (
+				6F03E74E2D4459EC0068A0C9 /* Sources */,
+				6F03E74F2D4459EC0068A0C9 /* Frameworks */,
+				6F03E7502D4459EC0068A0C9 /* Resources */,
+				6F03E7722D445A150068A0C9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F03E7712D445A150068A0C9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6F03E7532D4459EC0068A0C9 /* Example */,
+			);
+			name = ValuePickerExample;
+			packageProductDependencies = (
+			);
+			productName = ValuePickerExample;
+			productReference = 6F03E7522D4459EC0068A0C9 /* ValuePickerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6F9C66582B6AC36B007093B5 /* ValuePicker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F9C666D2B6AC36C007093B5 /* Build configuration list for PBXNativeTarget "ValuePicker" */;
@@ -113,6 +171,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6F03E7652D4459F80068A0C9 /* Sources */,
 			);
 			name = ValuePicker;
 			productName = ValuePicker;
@@ -132,6 +193,9 @@
 			dependencies = (
 				6F9C66662B6AC36C007093B5 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				6F03E76B2D4459FC0068A0C9 /* Tests */,
+			);
 			name = ValuePickerTests;
 			productName = ValuePickerTests;
 			productReference = 6F9C66632B6AC36C007093B5 /* ValuePickerTests.xctest */;
@@ -144,9 +208,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					6F03E7512D4459EC0068A0C9 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					6F9C66582B6AC36B007093B5 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -156,7 +223,6 @@
 				};
 			};
 			buildConfigurationList = 6F9C66532B6AC36B007093B5 /* Build configuration list for PBXProject "ValuePicker" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -164,17 +230,26 @@
 				Base,
 			);
 			mainGroup = 6F9C664F2B6AC36B007093B5;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 6F9C665A2B6AC36B007093B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6F9C66582B6AC36B007093B5 /* ValuePicker */,
 				6F9C66622B6AC36C007093B5 /* ValuePickerTests */,
+				6F03E7512D4459EC0068A0C9 /* ValuePickerExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6F03E7502D4459EC0068A0C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6F9C66572B6AC36B007093B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,13 +267,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6F03E74E2D4459EC0068A0C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6F9C66552B6AC36B007093B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F9C665E2B6AC36B007093B5 /* ValuePicker.docc in Sources */,
-				6F9C66742B6AC377007093B5 /* ValuePicker.swift in Sources */,
-				6FCA02832C1EE1C2003B1949 /* ValuePickerTagValueTraitKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,13 +285,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F9C66692B6AC36C007093B5 /* ValuePickerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6F03E7712D445A150068A0C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+				macos,
+			);
+			target = 6F9C66582B6AC36B007093B5 /* ValuePicker */;
+			targetProxy = 6F03E7702D445A150068A0C9 /* PBXContainerItemProxy */;
+		};
 		6F9C66662B6AC36C007093B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6F9C66582B6AC36B007093B5 /* ValuePicker */;
@@ -221,6 +308,86 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		6F03E75E2D4459EE0068A0C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ValuePickerExample/ValuePickerExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ValuePickerExample/Preview Content\"";
+				DEVELOPMENT_TEAM = RL7M4Z58CJ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.recouse.ValuePickerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		6F03E75F2D4459EE0068A0C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ValuePickerExample/ValuePickerExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ValuePickerExample/Preview Content\"";
+				DEVELOPMENT_TEAM = RL7M4Z58CJ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.recouse.ValuePickerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 		6F9C666B2B6AC36C007093B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -275,9 +442,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -336,9 +503,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -363,7 +530,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
@@ -372,7 +539,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
@@ -380,7 +547,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
@@ -404,7 +572,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
@@ -413,7 +581,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
@@ -421,7 +589,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = auto;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
@@ -432,7 +601,6 @@
 		6F9C66712B6AC36C007093B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -444,7 +612,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.recouse.ValuePickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,7 +623,6 @@
 		6F9C66722B6AC36C007093B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -466,7 +634,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.recouse.ValuePickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,6 +645,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6F03E7602D4459EE0068A0C9 /* Build configuration list for PBXNativeTarget "ValuePickerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F03E75E2D4459EE0068A0C9 /* Debug */,
+				6F03E75F2D4459EE0068A0C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6F9C66532B6AC36B007093B5 /* Build configuration list for PBXProject "ValuePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

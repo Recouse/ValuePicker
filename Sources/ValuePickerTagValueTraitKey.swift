@@ -18,8 +18,9 @@ struct ValuePickerTagValueTraitKey<V>: _ViewTraitKey, Sendable where V: Hashable
     }
 }
 
-extension View {
+public extension View {
     func valuePickerTag<V>(_ value: V) -> some View where V: Hashable & Sendable {
         _trait(ValuePickerTagValueTraitKey<V>.self, .tagged(value))
+            .modifier(ValuePickerItemPreferenceModifier(id: value))
     }
 }
