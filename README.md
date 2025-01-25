@@ -5,7 +5,7 @@
 
 Customizable (soon) value picker for SwiftUI.
 
-<img width="300" src="https://github.com/user-attachments/assets/91525082-f9c1-4539-9382-47a044b8a819" alt="ValuePicker" />
+<img width="300" src="https://github.com/user-attachments/assets/58bf0f90-6c22-485c-9921-25012b5b9512" alt="ValuePicker Demo" />
 
 > [!Note]
 > Please note that this is a work in progress. Planned features include, but are not limited to:
@@ -29,6 +29,7 @@ In your `Package.swift` file, first add the following to the package `dependenci
 
 ```swift
 .package(url: "https://github.com/Recouse/ValuePicker.git"),
+
 ```
 
 And then, include "ValuePicker" as a dependency for your target:
