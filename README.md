@@ -1,5 +1,8 @@
 # ValuePicker
 
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FRecouse%2FValuePicker%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/Recouse/ValuePicker)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FRecouse%2FValuePicker%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/Recouse/ValuePicker)
+
 Customizable (soon) value picker for SwiftUI.
 
 <img width="300" src="https://github.com/user-attachments/assets/91525082-f9c1-4539-9382-47a044b8a819" alt="ValuePicker" />
