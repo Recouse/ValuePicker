@@ -5,7 +5,7 @@
 //  Created by Firdavs Khaydarov on 25/01/2025.
 //
 
-import UIKit
+import CoreGraphics
 
 // Taken from https://stackoverflow.com/a/51076570/7844080
 

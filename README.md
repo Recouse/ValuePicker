@@ -66,6 +66,7 @@ struct ContentView: View {
 
 ## Compatibility
 * iOS 15.0+
+* macOS 12.0+
 
 ## Dependencies
 No dependencies.
