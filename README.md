@@ -4,6 +4,12 @@ Customizable value picker for SwiftUI.
 
 <img width="300" src="https://github.com/user-attachments/assets/91525082-f9c1-4539-9382-47a044b8a819" alt="ValuePicker" />
 
+> [!Note]
+> Please note that this is a work in progress. Planned features include, but are not limited to:
+> - [ ] Haptic feedback
+> - [ ] Custom styles
+> - [ ] More platforms (macOS, tvOS, watchOS, visionOS)
+
 ## Installation
 
 #### [Xcode Package Dependency](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
@@ -31,6 +37,8 @@ And then, include "ValuePicker" as a dependency for your target:
 ```
 
 ## Usage
+
+The API is designed to resemble SwiftUI's [Picker](https://developer.apple.com/documentation/swiftui/picker). Instead of using `tag()`, you should use `valuePickerTag()`, which also accepts any `Hashable` value.
 
 ```swift
 import SwiftUI
