@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-struct ValuePickerConstants {
-    static let containerEdgeInsets = EdgeInsets(top: 6, leading: 6, bottom: 6, trailing: 6)
-    static let capsuleEdgeInsets = EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12)
-}
-
 extension Animation {
     static let valuePicker: Animation = .spring(duration: 0.3, bounce: 0.15, blendDuration: 0.21)
 }
@@ -28,6 +23,11 @@ public struct ValuePicker<SelectionValue, Content>: View where SelectionValue: H
     @State private var isDragging = false
     @State private var dragTranslation: CGSize = .zero
     @State private var preselectedValue: SelectionValue?
+
+    @Environment(\.valuePickerShape) private var valuePickerShape
+    @Environment(\.valuePickerItemShape) private var valuePickerItemShape
+    @Environment(\.valuePickerContainerPadding) private var valuePickerContainerPadding
+    @Environment(\.valuePickerItemPadding) private var valuePickerItemPadding
 
     var pressGesture: some Gesture {
         DragGesture(minimumDistance: 0)
@@ -89,7 +89,7 @@ public struct ValuePicker<SelectionValue, Content>: View where SelectionValue: H
                 content
             }
         }
-        .padding(ValuePickerConstants.containerEdgeInsets)
+        .padding(valuePickerContainerPadding)
         .backgroundPreferenceValue(
             ValuePickerItemPreferenceKey<SelectionValue>.self
         ) { values in
@@ -102,7 +102,7 @@ public struct ValuePicker<SelectionValue, Content>: View where SelectionValue: H
                     geometry: geometry
                 )
                 let isPressingCapsule = isPressing && currentFrame.contains(pressStartLocation)
-                Capsule()
+                valuePickerItemShape
                     .fill(.background)
                     .scaleEffect(isPressingCapsule || isDragging ? 0.95 : 1)
                     .shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 1)
@@ -115,7 +115,7 @@ public struct ValuePicker<SelectionValue, Content>: View where SelectionValue: H
                     }
             }
         }
-        .background(.quaternary, in: .capsule)
+        .background(.quaternary, in: valuePickerShape)
         .gesture(pressGesture.simultaneously(with: dragGesture))
     }
 
@@ -177,16 +177,16 @@ public struct ValuePicker<SelectionValue, Content>: View where SelectionValue: H
         dragTranslation: CGSize = .zero,
         geometry: GeometryProxy
     ) -> CGRect {
-        let capsuleWidth = base.width + ValuePickerConstants.capsuleEdgeInsets.leading + ValuePickerConstants.capsuleEdgeInsets.trailing
-        let capsuleHeight = base.height + ValuePickerConstants.capsuleEdgeInsets.top + ValuePickerConstants.capsuleEdgeInsets.bottom
+        let capsuleWidth = base.width + valuePickerItemPadding.leading + valuePickerItemPadding.trailing
+        let capsuleHeight = base.height + valuePickerItemPadding.top + valuePickerItemPadding.bottom
         let x = max(
-            ValuePickerConstants.containerEdgeInsets.leading,
+            valuePickerContainerPadding.leading,
             min(
-                base.minX + dragTranslation.width - ValuePickerConstants.containerEdgeInsets.leading - ValuePickerConstants.containerEdgeInsets.trailing,
-                geometry.frame(in: .local).maxX - capsuleWidth - ValuePickerConstants.containerEdgeInsets.trailing
+                base.minX + dragTranslation.width - valuePickerContainerPadding.leading - valuePickerContainerPadding.trailing,
+                geometry.frame(in: .local).maxX - capsuleWidth - valuePickerContainerPadding.trailing
             )
         )
-        let y = base.minY - 8
+        let y = base.minY - valuePickerItemPadding.top
 
         return CGRect(
             x: x,
@@ -203,7 +203,9 @@ struct ValuePickerLayout<SelectionValue>: _VariadicView_MultiViewRoot where Sele
     let isDragging: Bool
     let isPressing: Bool
     let animation: Animation
-    
+
+    @Environment(\.valuePickerItemPadding) private var valuePickerItemPadding
+
     func body(children: _VariadicView.Children) -> some View {
         ForEach(children) { child in
             let trait = child[ValuePickerTagValueTraitKey<SelectionValue>.self]
@@ -219,7 +221,7 @@ struct ValuePickerLayout<SelectionValue>: _VariadicView_MultiViewRoot where Sele
             child
                 .foregroundStyle(highlighted ? .primary : .secondary)
                 .lineLimit(1)
-                .padding(ValuePickerConstants.capsuleEdgeInsets)
+                .padding(valuePickerItemPadding)
                 .animation(animation, value: selection)
                 .animation(animation, value: preselected)
                 .allowsTightening(false)

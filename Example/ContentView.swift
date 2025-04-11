@@ -39,6 +39,8 @@ struct ContentView: View {
                             .valuePickerTag(displayOption)
                     }
                 }
+                .valuePickerShape(RoundedRectangle(cornerRadius: 14))
+                .valuePickerItemShape(RoundedRectangle(cornerRadius: 8))
             }
 
             Divider()
