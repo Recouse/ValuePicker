@@ -23,6 +23,7 @@ public struct ValuePicker<SelectionValue, Content>: View where SelectionValue: H
     public let content: Content
 
     @State private var isPressing = false
+    @State private var pressStartLocation: CGPoint = .zero
     @State private var pressFinalLocation: CGPoint = .zero
     @State private var isDragging = false
     @State private var dragTranslation: CGSize = .zero
@@ -33,6 +34,7 @@ public struct ValuePicker<SelectionValue, Content>: View where SelectionValue: H
             .onChanged { value in
                 withAnimation(animation) {
                     isPressing = true
+                    pressStartLocation = value.startLocation
                 }
             }
             .onEnded { value in
@@ -99,9 +101,10 @@ public struct ValuePicker<SelectionValue, Content>: View where SelectionValue: H
                     values: values,
                     geometry: geometry
                 )
+                let isPressingCapsule = isPressing && currentFrame.contains(pressStartLocation)
                 Capsule()
                     .fill(.background)
-                    .scaleEffect(isDragging ? 0.95 : 1)
+                    .scaleEffect(isPressingCapsule || isDragging ? 0.95 : 1)
                     .shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 1)
                     .frame(width: currentFrame.width, height: currentFrame.height)
                     .offset(x: currentFrame.minX, y: currentFrame.minY)
